@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Context Switching Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Context Switching</h1>
+
+    <div class="process-section">
+      <h2>Running Process</h2>
+      <div class="running-process" id="runningProcess">
+        <p>No running process</p>
+        <button onclick="stopProcess()">Stop Process</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="process-section">
+      <h2>Ready Queue</h2>
+      <ul id="readyQueue">
+        <li>No processes in ready queue</li>
+      </ul>
+      <div class="add-process">
+        <input type="text" id="processInput" placeholder="Process">
+        <input type="number" id="timeInput" placeholder="Time">
+        <button onclick="addProcess()">Add Process</button>
+      </div>
+      <button onclick="startProcess()">Start Process</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

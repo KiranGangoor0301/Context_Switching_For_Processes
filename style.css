@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Condensed:wght@200&family=Roboto:wght@300;400&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #222222, #444444, #3a3a3a, #595858, #222222);    
+    color: white;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .process-section {
+    margin-bottom: 20px;
+  }
+  
+  .running-process {
+    margin-bottom: 10px;
+  }
+  
+  /* .add-process input {
+    margin-right: 10px;
+  }
+   */
+  button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  body h1{
+    text-align: center;
+    margin-top: 30px;
+      text-shadow: 2px 2px #494a4a;
+      font-family: 'Press Start 2P';
+  }
+
+  .container
+  {
+    border: 1px solid aquamarine;
+    font-family: 'Roboto';
+    padding: 3%;
+  }
+  .running-process
+  {
+    border: 1px solid white;
+    padding: 12px 4%;
+  }
+  .process-section ul 
+  {
+border: 1px solid white;
+padding: 28px 4%;
+  }
+  .process-section ul li
+  {
+    list-style-type: none;
+    margin: 10px 0;
+    border: 1px solid rgb(119, 142, 142);
+    padding: 12px 4%;
+  }
+  .add-process
+  {
+    display: flex;
+    align-items: center;
+
+  }
+  .add-process input
+  {
+    height: 24px;
+    width: 55%;
+    padding: 0 2%;
+    margin-bottom: 30px;
+    background: transparent;
+    color: #fff;
+    
+  }
+  .time
+  {
+    margin-left: 30px;
+  }
+  /* Add this to your existing CSS or create a new style.css file and link it to your HTML */
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+/* Additional styling for the 'Stop Process' button */
+button.stop-btn {
+  background-color: #f44336; /* Red */
+}
+
+button.stop-btn:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
+/* Styles for modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+  color: black;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn
+{
+  margin-left: 12px;
+}
+/* Existing CSS code */
+/* ... */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+  text-align: center;
+}
+
+.popup .icon {
+  display: inline-block;
+  animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Your existing CSS */
+
+
+.tick {
+  width: 80px;
+  height: 80px;
+  margin: 50px auto;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #00ff00;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.tick_mark {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform: translateX(10px);
+}
+
+.tick_line {
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #00ff00;
+}
+
+.tick_long {
+  top: 29px;
+  left: 0;
+  transform-origin: right top;
+  animation: drawLong 0.4s ease-in-out 0.4s forwards;
+}
+
+.tick_short {
+  top: 37px;
+  right: 0;
+  transform-origin: left top;
+  animation: drawShort 0.4s ease-in-out 0.4s forwards;
+}
+
+@keyframes drawLong {
+  0% {
+    width: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    width: 30px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes drawShort {
+  0% {
+    width: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    width: 15px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #00ff00;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+.btn-clear
+{
+  margin-left: 12px;
+}
+/* Your existing CSS */
+
+@keyframes addProcessAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes removeProcessAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.add-animation {
+  animation: addProcessAnimation 0.5s ease-in-out;
+}
+
+.remove-animation {
+  animation: removeProcessAnimation 0.5s ease-in-out;
+}

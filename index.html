@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Context Switching Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CONTEXT SWITCHING FOR PROCESSES</h1>
+  <div class="container">
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalText"></p>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+    
+    <div class="process-section">
+      <h2>Running Process</h2>
+      <div class="running-process" id="runningProcess">
+        <p>No running process</p>
+      </div>
+    </div>
+    <div class="popup" id="successPopup">
+      <div class="tick">
+        <div class="tick_mark">
+          <div class="tick_line tick_long"></div>
+          <div class="tick_line tick_short"></div>
+        </div>
+      </div>
+      <span class="message">Process Added!</span>
+    </div>
+    
+    <hr>
+
+    <div class="process-section">
+      <h2>Ready Queue</h2>
+      <ul id="readyQueue">
+        <li>No processes in ready queue</li>
+      </ul>
+      <div class="add-process">
+        <input type="text" id="processInput" placeholder="Process">
+        <input type="number" id="timeInput" placeholder="Time" class="time">
+      </div>
+      <button onclick="addProcess()">Add Process</button>
+      <button onclick="startProcess()" class="btn">Start Process</button>
+      <button onclick="clearAllProcesses()" class="btn-clear">Clear All Processes</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
